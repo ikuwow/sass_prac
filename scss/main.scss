@@ -5,13 +5,8 @@
 
 // data type
 
-$baseFontSize: 16px; // declare variable (integer)
-$imgDir: "../img/"; // declare string variable
-$brandColor: purple; // declare color
-
-// image function: lighten(), darken()
-
-$debugMode: true;
+@import "settings";
+@import "functions";
 
 #main {
     width: 90%;
@@ -68,7 +63,6 @@ $i: 10;
     $i: $i+1;
 }
 
-
 // List
 
 // $animals: cat, dog, tiger;
@@ -77,16 +71,6 @@ $i: 10;
     .icon-#{$animal} {
         background: url("#{$animal}.png");
     }
-}
-
-// function
-$totalWidth: 960px;
-$columnCount: 10;
-@function getColumnWidth($width, $count) {
-    $padding: 10px;
-    $columnWidth: floor(($width - $padding * ($count - 1)) / $count);
-    @debug $columnWidth; // output to debug console
-    @return $columnWidth;
 }
 
 .grid {
