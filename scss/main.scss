@@ -7,6 +7,9 @@
 
 $baseFontSize: 16px; // declare variable (integer)
 $imgDir: "../img/"; // declare string variable
+$brandColor: purple; // declare color
+
+// image function: lighten(), darken()
 
 #main {
     width: 90%;
@@ -15,6 +18,7 @@ $imgDir: "../img/"; // declare string variable
 
     // nest structure
     p {
+        color: darken($brandColor, 10%); // 
         font-size: $baseFontSize; // using variable
         a {
             text-decoration: none;
