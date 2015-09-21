@@ -11,6 +11,8 @@ $brandColor: purple; // declare color
 
 // image function: lighten(), darken()
 
+$debugMode: true;
+
 #main {
     width: 90%;
     // background: url($imgDir + "bg.png"); //concat string
@@ -32,6 +34,20 @@ $brandColor: purple; // declare color
         .big {
             font-size: #{12+12}px;
         }
+    }
+
+}
+
+// conditional statement
+.debug {
+    @if variable-exists(debugMode) {
+        @if $debugMode == true {
+            color: red;
+        } @else {
+            display: none;
+        }
+    } @else {
+        display: none;
     }
 }
 
