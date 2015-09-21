@@ -78,3 +78,34 @@ $i: 10;
     width: getColumnWidth($totalWidth, $columnCount);
 }
 
+
+// mixin
+
+@mixin round($radius: 4px) {
+    border-radius: $radius;
+}
+
+.label {
+    font-size: 12px;
+    @include round(5px);
+}
+
+
+// @extend
+// mixinよりもコードが少なくできる場合がある
+.msg {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 4px;
+    color: white;
+}
+
+.errorMsg {
+    @extend .msg;
+    background: red;
+}
+
+.warningMsg {
+    @extend .msg;
+    background: orange;
+}
