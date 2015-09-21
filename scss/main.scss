@@ -78,3 +78,19 @@ $i: 10;
         background: url("#{$animal}.png");
     }
 }
+
+// function
+$totalWidth: 960px;
+$columnCount: 10;
+@function getColumnWidth($width, $count) {
+    $padding: 10px;
+    $columnWidth: floor(($width - $padding * ($count - 1)) / $count);
+    @debug $columnWidth; // output to debug console
+    @return $columnWidth;
+}
+
+.grid {
+    float: left;
+    width: getColumnWidth($totalWidth, $columnCount);
+}
+
