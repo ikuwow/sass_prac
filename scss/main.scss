@@ -1,7 +1,19 @@
+// slash commentout
+
+/* it is included in output css */
+// it is not included in output css
+
 #main {
     width: 90%;
+    // nest structure
     p {
-        font-size: 16px;
+        font-size: 24px;
+        a {
+            text-decoration: none;
+            &:hover { // &: parent element
+                font-weight: bold;
+            }
+        }
     }
 }
 
