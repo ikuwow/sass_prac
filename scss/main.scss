@@ -3,16 +3,30 @@
 /* it is included in output css */
 // it is not included in output css
 
+// data type
+
+$baseFontSize: 16px; // declare variable (integer)
+$imgDir: "../img/"; // declare string variable
+
 #main {
     width: 90%;
+    // background: url($imgDir + "bg.png"); //concat string
+    background: url("#{$imgDir}bg.png");
+
     // nest structure
     p {
-        font-size: 24px;
+        font-size: $baseFontSize; // using variable
         a {
             text-decoration: none;
             &:hover { // &: parent element
                 font-weight: bold;
             }
+        }
+        .sub {
+            font-size: $baseFontSize - 4px; // calculate variable
+        }
+        .big {
+            font-size: #{12+12}px;
         }
     }
 }
