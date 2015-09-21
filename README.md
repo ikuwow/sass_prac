@@ -28,4 +28,8 @@ $ gem install sass
 $ sass scss/main.scss:css/main.css --style expanded
 ```
 
-### Multiple CSS
+### Live Reload
+
+```
+$ sass --style expanded --watch scss:css
+```
